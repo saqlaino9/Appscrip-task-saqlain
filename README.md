@@ -1,40 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 🛍️ Product Listing Page (PLP)
 
-## Getting Started
+## 🚀 Live Demo
 
-First, run the development server:
+👉 (Add your Netlify link here after deployment)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 📌 Overview
+
+This project is a **Product Listing Page (PLP)** built as part of the Appscrip assignment.
+It replicates a modern e-commerce interface with filtering, search, sorting, and responsive design.
+
+---
+
+## 🧠 Features
+
+* 🔍 **Search Functionality**
+
+  * Real-time filtering
+  * Enter key support
+
+* 🎯 **Category Filters**
+
+  * Filter products by category
+
+* 💰 **Sorting**
+
+  * Recommended (default)
+  * Price: Low → High
+  * Price: High → Low
+
+* ❤️ **Wishlist**
+
+  * Add/remove products
+
+* 📱 **Responsive Design**
+
+  * Mobile, tablet, desktop support
+
+* ⚡ **Server-Side Rendering (SSR)**
+
+  * Using Next.js `getServerSideProps`
+
+* 🎨 **Figma-Based UI**
+
+  * Clean layout inspired by provided design
+
+---
+
+## 🛠 Tech Stack
+
+* **Framework:** Next.js (React)
+* **Styling:** CSS (No frameworks)
+* **Icons:** React Icons
+* **API:** FakeStore API
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+ ├── components/
+ │   ├── Header.js
+ │   ├── Filters.js
+ │   ├── ProductCard.js
+ │   ├── ProductGrid.js
+ │   └── Footer.js
+ │
+ ├── pages/
+ │   └── index.js
+ │
+ └── styles/
+     └── globals.css
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## ⚙️ Installation & Setup
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```bash
+git clone <your-repo-link>
+cd your-project
+npm install
+npm run dev
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+Open:
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+http://localhost:3000
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🌍 Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+Deployed using **Netlify**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 👨‍💻 Author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+**Saqlain Ahmed**
