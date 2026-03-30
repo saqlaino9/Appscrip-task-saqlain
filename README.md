@@ -2,7 +2,7 @@
 
 ## 🚀 Live Demo
 
-👉 (Add your Netlify link here after deployment)
+https://shop-o9.netlify.app/
 
 ---
 
