@@ -119,7 +119,7 @@ export default function Home({ products }) {
 }
 
 // SSR (Server Side Rendering)
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch("https://fakestoreapi.com/products");
   const products = await res.json();
 

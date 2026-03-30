@@ -57,6 +57,7 @@ body {
 .logo {
   font-weight: bold;
   font-size: 20px;
+  color: rgb(36, 12, 64);
 }
 
 .search {

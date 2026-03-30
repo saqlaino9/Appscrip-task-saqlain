@@ -22,7 +22,7 @@ const Header = ({ search, setSearch }) => {
         </div>
 
         {/* LOGO */}
-        <div className="logo">Saqlain Store</div>
+        <div className="logo">Saqlain's Store</div>
 
         {/* RIGHT SIDE */}
         <div className="nav-right">
