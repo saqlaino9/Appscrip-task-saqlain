@@ -120,10 +120,25 @@ export default function Home({ products }) {
 
 // SSR (Server Side Rendering)
 export async function getStaticProps() {
-  const res = await fetch("https://fakestoreapi.com/products");
-  const products = await res.json();
+  try {
+    const res = await fetch("https://fakestoreapi.com/products");
 
-  return {
-    props: { products },
-  };
+    const contentType = res.headers.get("content-type") || "";
+
+    if (!res.ok || !contentType.includes("application/json")) {
+      throw new Error("Invalid API response");
+    }
+
+    const products = await res.json();
+
+    return {
+      props: { products },
+    };
+  } catch (error) {
+    console.error("Fetch failed:", error);
+
+    return {
+      props: { products: [] }, // fallback
+    };
+  }
 }
