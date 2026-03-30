@@ -1,16 +1,33 @@
 import Head from "next/head";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Filters from "../components/Filters";
 import ProductGrid from "../components/ProductGrid";
 
-export default function Home({ products }) {
+export default function Home() {
+  const [products, setProducts] = useState([]);
+  const [loadingData, setLoadingData] = useState(true);
+
   const [search, setSearch] = useState("");
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [sort, setSort] = useState("");
   const [loading, setLoading] = useState(false);
   const [wishlist, setWishlist] = useState([]);
+
+  // 🔥 FETCH PRODUCTS (CLIENT SIDE)
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products")
+      .then((res) => res.json())
+      .then((data) => {
+        setProducts(data);
+        setLoadingData(false);
+      })
+      .catch(() => {
+        setProducts([]);
+        setLoadingData(false);
+      });
+  }, []);
 
   // wishlist toggle
   const toggleWishlist = (id) => {
@@ -30,7 +47,7 @@ export default function Home({ products }) {
       setLoading(false);
     }, 300);
   };
-  
+
   // Handle category filter
   const handleCategoryChange = (category) => {
     if (selectedCategories.includes(category)) {
@@ -99,7 +116,7 @@ export default function Home({ products }) {
           </select>
 
           {/* Loading */}
-          {loading ? (
+          {loading || loadingData ? (
             <p>Loading...</p>
           ) : finalProducts.length === 0 ? (
             <p>No products found 😢</p>
@@ -116,29 +133,4 @@ export default function Home({ products }) {
       <Footer />
     </>
   );
-}
-
-// SSR (Server Side Rendering)
-export async function getStaticProps() {
-  try {
-    const res = await fetch("https://fakestoreapi.com/products");
-
-    const contentType = res.headers.get("content-type") || "";
-
-    if (!res.ok || !contentType.includes("application/json")) {
-      throw new Error("Invalid API response");
-    }
-
-    const products = await res.json();
-
-    return {
-      props: { products },
-    };
-  } catch (error) {
-    console.error("Fetch failed:", error);
-
-    return {
-      props: { products: [] }, // fallback
-    };
-  }
 }
