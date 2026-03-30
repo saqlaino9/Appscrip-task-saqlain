@@ -103,3 +103,16 @@ Deployed using **Netlify**
 ## 👨‍💻 Author
 
 **Saqlain Ahmed**
+
+---
+## 📸 Screenshots
+
+<img width="1763" height="3224" alt="image" src="https://github.com/user-attachments/assets/807e5b71-d874-419c-804e-8074f152e1fd" />
+
+<img width="1763" height="1698" alt="image" src="https://github.com/user-attachments/assets/4778cbd1-eb25-4a43-bbea-4bc44bf206a5" />
+
+<img width="1763" height="1429" alt="image" src="https://github.com/user-attachments/assets/cd73a35e-ff84-4eb7-8d62-bbfb55ae1203" />
+
+<img width="1763" height="1698" alt="image" src="https://github.com/user-attachments/assets/e8cfb778-8067-402d-8e57-654c8690d35e" />
+
+
